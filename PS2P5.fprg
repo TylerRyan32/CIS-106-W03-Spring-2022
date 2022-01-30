@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-01-30 11:17:05 AM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLTdBNThFNkE7MjAyMi0wMS0zMDsxMTowNjo0OSBBTTszMjUy"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLTdBNThFNkE7MjAyMi0wMS0zMDsxMToxNzowNSBBTTsxOzMzNTQ="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <declare name="d" type="Real" array="False" size=""/>
+            <declare name="t" type="Integer" array="False" size=""/>
+            <declare name="s" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter amount of item&quot;" newline="True"/>
+            <input variable="i"/>
+            <output expression="&quot;Enter the discount in decimal form&quot;" newline="True"/>
+            <input variable="d"/>
+            <assign variable="s" expression="i * d"/>
+            <assign variable="t" expression="(i) * (1-d)"/>
+            <output expression="&quot;You saved $&quot; &amp; s" newline="True"/>
+            <output expression="&quot;So, your new total is &quot; &amp; t" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

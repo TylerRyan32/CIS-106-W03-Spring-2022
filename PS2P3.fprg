@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-01-30 10:59:49 AM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLTdBNThFNkE7MjAyMi0wMS0zMDsxMDo1NToxNiBBTTszMjQ5"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLTdBNThFNkE7MjAyMi0wMS0zMDsxMDo1OTo0OSBBTTsxOzMzNjc="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="L" type="Integer" array="False" size=""/>
+            <declare name="W" type="Integer" array="False" size=""/>
+            <declare name="A" type="Integer" array="False" size=""/>
+            <declare name="C" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter length of rectangle&quot;" newline="True"/>
+            <input variable="L"/>
+            <output expression="&quot;Enter width of rectangle&quot;" newline="True"/>
+            <input variable="W"/>
+            <assign variable="A" expression="L * W"/>
+            <assign variable="C" expression="(2 * L) + (2 * W)"/>
+            <output expression="&quot;The area of the rectangle is &quot; &amp; A" newline="True"/>
+            <output expression="&quot;The circumference of the rectangle is &quot; &amp; C" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
