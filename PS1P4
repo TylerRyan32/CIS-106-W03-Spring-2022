@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-01-26 07:13:35 PM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLUNNN1NQSEI7MjAyMi0wMS0yNjswNjo1MDo1OSBQTTszMzU5"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLUNNN1NQSEI7MjAyMi0wMS0yNjswNzoxMzozNSBQTTsxOzM0NjE="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="x" type="Integer" array="False" size=""/>
+            <declare name="t" type="Integer" array="False" size=""/>
+            <declare name="c" type="Integer" array="False" size=""/>
+            <input variable="x"/>
+            <assign variable="t" expression="x * 0.15"/>
+            <assign variable="c" expression="x + t"/>
+            <output expression="&quot;The tip is &quot; &amp; t" newline="True"/>
+            <output expression="&quot;The total cost is &quot; &amp; c" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-01-29 08:15:30 PM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLUZRSFBNSjU7MjAyMi0wMS0yOTswODowNTo1NSBQTTszMzY3"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLUZRSFBNSjU7MjAyMi0wMS0yOTswODoxNTozMCBQTTsxOzM0Njk="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i" type="Real" array="False" size=""/>
+            <declare name="T" type="Real" array="False" size=""/>
+            <output expression="&quot;Enter the amount of item&quot;" newline="True"/>
+            <input variable="i"/>
+            <assign variable="T" expression="1.07 * i"/>
+            <output expression="&quot;The total before tax is &quot; &amp; i" newline="True"/>
+            <output expression="&quot;The total after tax is &quot; &amp; T" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
