@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-02-06 07:27:49 PM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLU04MjBGSkk7MjAyMi0wMi0wNjswNzoxMjoxMCBQTTszMjky"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLU04MjBGSkk7MjAyMi0wMi0wNjswNzoyNzo0OSBQTTsxOzM0MTg="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="name" type="String" array="False" size=""/>
+            <declare name="app" type="Real" array="False" size=""/>
+            <declare name="warcost" type="Real" array="False" size=""/>
+            <declare name="war" type="Real" array="False" size=""/>
+            <declare name="total" type="Real" array="False" size=""/>
+            <output expression="&quot;Enter name of appliance&quot;" newline="True"/>
+            <input variable="name"/>
+            <output expression="&quot;Enter cost of appliance&quot;" newline="True"/>
+            <input variable="app"/>
+            <if expression="app &gt; 1000">
+                <then>
+                    <assign variable="warcost" expression="0.10 * app"/>
+                </then>
+                <else>
+                    <assign variable="warcost" expression="0.05 * app"/>
+                </else>
+            </if>
+            <assign variable="total" expression="app + warcost"/>
+            <output expression="name" newline="True"/>
+            <output expression="&quot;Cost of appliance &quot;&amp; app" newline="True"/>
+            <output expression="&quot;Cost of warranty &quot; &amp; warcost" newline="True"/>
+            <output expression="&quot;Total is &quot; &amp; total" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
