@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-03-06 12:41:39 PM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLTc5Q09GMzg7MjAyMi0wMy0wNjsxMjoyNDo1OSBQTTszMjky"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLTc5Q09GMzg7MjAyMi0wMy0wNjsxMjo0MTozOSBQTTsxOzMzOTc="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="A" type="Integer" array="False" size=""/>
+            <declare name="B" type="Integer" array="False" size=""/>
+            <declare name="C" type="Integer" array="False" size=""/>
+            <declare name="J" type="Integer" array="False" size=""/>
+            <assign variable="A" expression="1"/>
+            <assign variable="B" expression="1"/>
+            <output expression="A" newline="True"/>
+            <output expression="B" newline="True"/>
+            <for variable="J" start="1" end="20" direction="inc" step="1">
+                <assign variable="C" expression="A + B"/>
+                <output expression="C" newline="True"/>
+                <assign variable="A" expression="B"/>
+                <assign variable="B" expression="C"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>
