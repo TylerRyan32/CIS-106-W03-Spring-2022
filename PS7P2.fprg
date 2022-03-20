@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-03-19 07:23:18 PM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLUhUQ05FOUc7MjAyMi0wMy0xOTswNzoxMDozNCBQTTszMzUx"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLUhUQ05FOUc7MjAyMi0wMy0xOTswNzoyMzoxOCBQTTsxOzM0NjU="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Name" type="String" array="False" size=""/>
+            <declare name="hits" type="Integer" array="False" size=""/>
+            <declare name="AB" type="Integer" array="False" size=""/>
+            <declare name="avg" type="Real" array="False" size=""/>
+            <input variable="Name"/>
+            <input variable="hits"/>
+            <input variable="AB"/>
+            <call expression="BattingAVG(hits, AB)"/>
+            <assign variable="avg" expression="BattingAVG(hits, AB)"/>
+            <output expression="&quot;Players name: &quot; &amp; name" newline="True"/>
+            <output expression="&quot;Batting Average: &quot; &amp; avg" newline="True"/>
+        </body>
+    </function>
+    <function name="BattingAVG" type="Real" variable="avg">
+        <parameters>
+            <parameter name="hits" type="Integer" array="False"/>
+            <parameter name="AB" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="avg" type="Real" array="False" size=""/>
+            <assign variable="avg" expression="hits / AB"/>
+        </body>
+    </function>
+</flowgorithm>

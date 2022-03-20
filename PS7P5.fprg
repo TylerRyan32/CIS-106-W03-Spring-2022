@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-03-19 08:49:16 PM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLUhUQ05FOUc7MjAyMi0wMy0xOTswODozNjo0NiBQTTszMzYz"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLUhUQ05FOUc7MjAyMi0wMy0xOTswODo0OToxNiBQTTsxOzM0NzI="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="name" type="String" array="False" size=""/>
+            <declare name="crhours" type="Real" array="False" size=""/>
+            <declare name="discode" type="String" array="False" size=""/>
+            <declare name="tuition" type="Real" array="False" size=""/>
+            <input variable="name"/>
+            <input variable="crhours"/>
+            <input variable="discode"/>
+            <call expression="districtcharge(crhours, discode)"/>
+            <assign variable="tuition" expression="districtcharge(crhours,discode)"/>
+            <output expression="&quot;Student name: &quot; &amp; name" newline="True"/>
+            <output expression="&quot;Tuition: &quot; &amp; tuition" newline="True"/>
+        </body>
+    </function>
+    <function name="districtcharge" type="Real" variable="tuition">
+        <parameters>
+            <parameter name="crhours" type="Real" array="False"/>
+            <parameter name="discode" type="String" array="False"/>
+        </parameters>
+        <body>
+            <declare name="tuition" type="Real" array="False" size=""/>
+            <declare name="disprice" type="Real" array="False" size=""/>
+            <if expression="discode = &quot;I&quot;">
+                <then>
+                    <assign variable="disprice" expression="250"/>
+                </then>
+                <else>
+                    <if expression="discode = &quot;O&quot;">
+                        <then>
+                            <assign variable="disprice" expression="550"/>
+                        </then>
+                        <else/>
+                    </if>
+                </else>
+            </if>
+            <assign variable="tuition" expression="disprice * crhours"/>
+        </body>
+    </function>
+</flowgorithm>

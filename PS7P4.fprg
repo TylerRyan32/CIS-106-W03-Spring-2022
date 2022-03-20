@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-03-19 08:34:28 PM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLUhUQ05FOUc7MjAyMi0wMy0xOTswODoxMzoxMSBQTTszMzUw"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLUhUQ05FOUc7MjAyMi0wMy0xOTswODozNDoyOCBQTTsxOzM0Njk="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="name" type="String" array="False" size=""/>
+            <declare name="jobcode" type="String" array="False" size=""/>
+            <declare name="hours" type="Real" array="False" size=""/>
+            <declare name="payrate" type="Real" array="False" size=""/>
+            <declare name="grosspay" type="Real" array="False" size=""/>
+            <input variable="name"/>
+            <input variable="jobcode"/>
+            <input variable="hours"/>
+            <call expression="payrate(jobcode)"/>
+            <assign variable="payrate" expression="payrate(jobcode)"/>
+            <call expression="Grosspay(hours,payrate)"/>
+            <assign variable="grosspay" expression="Grosspay(hours, payrate)"/>
+            <output expression="&quot;Last name: &quot; &amp; name" newline="True"/>
+            <output expression="&quot;Gross pay: &quot; &amp; grosspay" newline="True"/>
+        </body>
+    </function>
+    <function name="Grosspay" type="Real" variable="grosspay">
+        <parameters>
+            <parameter name="payrate" type="Real" array="False"/>
+            <parameter name="hours" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="grosspay" type="Real" array="False" size=""/>
+            <assign variable="grosspay" expression="payrate * hours"/>
+        </body>
+    </function>
+    <function name="payrate" type="Real" variable="payrate">
+        <parameters>
+            <parameter name="jobcode" type="String" array="False"/>
+        </parameters>
+        <body>
+            <declare name="payrate" type="Real" array="False" size=""/>
+            <if expression="jobcode = &quot;L&quot;">
+                <then>
+                    <assign variable="payrate" expression="25"/>
+                </then>
+                <else>
+                    <if expression="jobcode = &quot;A&quot;">
+                        <then>
+                            <assign variable="payrate" expression="30"/>
+                        </then>
+                        <else>
+                            <if expression="jobcode = &quot;J&quot;">
+                                <then>
+                                    <assign variable="payrate" expression="50"/>
+                                </then>
+                                <else/>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
